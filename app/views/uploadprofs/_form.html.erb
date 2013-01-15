@@ -1,0 +1,33 @@
+<%= form_for(@uploadprof) do |f| %>
+  <% if @uploadprof.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@uploadprof.errors.count, "error") %> prohibited this uploadprof from being saved:</h2>
+
+      <ul>
+      <% @uploadprof.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :resume %><br />
+    <%= f.file_field :resume %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

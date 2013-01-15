@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @uploadprof.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @uploadprof.email %>
+</p>
+
+<p>
+  <b>Resume:</b>
+  <%= @uploadprof.resume %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= @uploadprof.photo %>
+</p>
+
+
+<%= link_to 'Edit', edit_uploadprof_path(@uploadprof) %> |
+<%= link_to 'Back', uploadprofs_path %>
